@@ -1,0 +1,512 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-weight: bolder;
+  font-family: 'Belanosima', sans-serif;
+}
+
+body {
+  width: 100%;
+  background-color: black;
+}
+
+nav {
+
+  margin-top: 10px;
+}
+
+.nav-main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  height: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 25px;
+  gap: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+}
+
+/* for all social containers*/
+.socialContainer {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: .3s;
+}
+
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: .3s;
+}
+
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: .3s;
+}
+
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #128C7E;
+  transition-duration: .3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+.links {
+  text-decoration: none;
+  color: lightgray;
+  font-size: small;
+}
+
+@media screen and (max-width: 500px) {
+
+  .nav-main,
+  .links,
+  #fonts {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .socialContainer {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+.nav-2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+  height: 20vh;
+  background-color: red;
+  position: absolute;
+  top: 30px;
+}
+
+.container {
+  /* background-color: orangered; */
+  position: relative;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.links2 {
+  text-decoration: none;
+  font-size: x-large;
+  background: linear-gradient(45deg, blue, yellow, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 5px;
+}
+
+.links2:hover {
+  font-size: 29px;
+  border: 2px solid white;
+  border-radius: 30%;
+  transition: 1s;
+}
+
+@media screen and (max-width: 1095px) {
+  .links2 {
+    font-size: 10px;
+  }
+
+  .nav-2 {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 100px 100px;
+  }
+}
+
+
+/* form starts here............. */
+
+
+.forms {
+  height: 60vh;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.cards .red {
+  background: url(clothes/clothe\ 1.jpg);
+  background-size: cover;
+}
+
+.cards .blue {
+  background: url(clothes/clothe\ 2.jpg);
+  background-size: cover;
+}
+
+.cards .green {
+  background: url(clothes/shoes.jpg);
+  background-size: cover;
+}
+
+.cards .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 200px;
+  width: 350px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.cards .card p.tip {
+  font-size: 2em;
+  font-weight: bolder;
+  color: red;
+}
+
+.cards .card p.second-text {
+  font-size: 1em;
+  color: blue;
+}
+
+.cards .card:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.cards:hover>.card:not(:hover) {
+  filter: blur(10px);
+  transform: scale(0.9, 0.9);
+}
+
+@media screen and (max-width: 1095px) {
+  .cards .card {
+    height: 100px;
+    width: 250px;
+  }
+}
+
+.form_container {
+  margin: 30px;
+  height: 70vh;
+  border-top: 100px double white;
+  border-left: 100px double white;
+  border-radius: 20px;
+  background-color: rgba(4, 226, 255, 0.8);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+@media screen and (max-width: 1095px) {
+  .smallest {
+    font-size: medium;
+    color: black;
+  }
+
+  .smallest2 {
+    font-size: x-small;
+    color: black;
+
+  }
+
+  .form_container {
+    height: 50vh;
+  }
+
+  .form {
+    height: 10em;
+    width: 10em;
+  }
+}
+
+.boom {
+  animation-name: lights;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  font-size: x-large;
+}
+
+@keyframes lights {
+  0% {
+    color: white;
+  }
+
+  30% {
+    color: blue;
+  }
+
+  60% {
+    color: yellow;
+  }
+
+  80% {
+    color: green;
+  }
+
+  100% {
+    color: red;
+  }
+}
+
+
+/* forms starts here */
+.form2 {
+  padding: 30px;
+  height: 70vh;
+  width: 60vw;
+  /* background-color: white; */
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 0.4em;
+  background-color: #171717;
+  border-radius: 25px;
+  transition: .4s ease-in-out;
+}
+
+.form:hover {
+  transform: scale(1.05);
+  border: 1px solid black;
+}
+
+#heading {
+  text-align: center;
+  margin: 2em;
+  color: rgb(255, 255, 255);
+  font-size: 1.2em;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  border-radius: 25px;
+  padding: 0.6em;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #171717;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+.input-icon {
+  height: 1.3em;
+  width: 1.3em;
+  fill: white;
+}
+
+.input-field {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: #d3d3d3;
+}
+
+.form .btn {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 2.5em;
+}
+
+.button1 {
+  padding: 0.5em;
+  padding-left: 1.1em;
+  padding-right: 1.1em;
+  border-radius: 5px;
+  margin-right: 0.5em;
+  border: none;
+  outline: none;
+  transition: .4s ease-in-out;
+  background-color: #252525;
+  color: white;
+}
+
+.button1:hover {
+  background-color: black;
+  color: white;
+}
+
+.button2 {
+  padding: 0.5em;
+  padding-left: 2.3em;
+  padding-right: 2.3em;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  transition: .4s ease-in-out;
+  background-color: #252525;
+  color: white;
+}
+
+.button2:hover {
+  background-color: black;
+  color: white;
+}
+
+.button3 {
+  margin-bottom: 3em;
+  padding: 0.5em;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  transition: .4s ease-in-out;
+  background-color: #252525;
+  color: white;
+}
+
+.button3:hover {
+  background-color: red;
+  color: white;
+}
+
+.info-main{
+  height: 70vh;
+  /* background-color: white; */
+  margin: 30px;
+  box-shadow: 0px 0px 30px white;
+  border-radius: 16px;
+}
+.emps{
+  height: 35vh;
+  background-color: rgba(0, 0, 0, 0.397);
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border-radius: 16px 16px  0px 0px;
+}
+
+.radio-button {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 10px;
+  position: relative;
+  align-items: center;
+}
+
+.radio-button input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.radio {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  transform: translateZ(-25px);
+  transition: all 0.3s ease-in-out;
+}
+
+.radio::before {
+  position: absolute;
+  content: '';
+  width: 10px;
+  height: 10px;
+  top: 5px;
+  left: 5px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.radio-button input[type="radio"]:checked + .radio {
+  border-color: #5cb85c;
+  transform: translateZ(0px);
+  background-color: #fff;
+}
+
+.radio-button input[type="radio"]:checked + .radio::before {
+  opacity: 1;
+}
+
+.all-info{
+    height: 35vh;
+    background-color: rgba(126, 126, 247, 0.281);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    text-shadow: 2px 2px 5px gold;
+  border-radius: 0px 0px  16px 16px;
+}
+
